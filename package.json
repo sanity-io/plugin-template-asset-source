@@ -1,0 +1,25 @@
+{
+  "name": "plugin-template-asset-source",
+  "private": true,
+  "version": "1.0.0",
+  "description": "A template for making a custom asset source plugin",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sanity-io/plugin-template-asset-source.git"
+  },
+  "keywords": [],
+  "author": "Sanity.io <hello@sanity.io>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sanity-io/plugin-template-asset-source/issues"
+  },
+  "homepage": "https://github.com/sanity-io/plugin-template-asset-source#readme",
+  "peerDependencies": {
+    "react": "^15.0.0"
+  },
+  "sanityTemplate": {
+    "suggestedName": "my-asset-source",
+    "requiresConfig": false,
+    "minimumBaseVersion": "0.119.0"
+  }
+}
