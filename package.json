@@ -20,6 +20,6 @@
   "sanityTemplate": {
     "suggestedName": "my-asset-source",
     "requiresConfig": false,
-    "minimumBaseVersion": "0.119.0"
+    "minimumBaseVersion": "0.146.0"
   }
 }
