@@ -25,9 +25,8 @@ function MyAssetSource (props) {
       assetDocumentProps: {
         originalFilename: 'bamse.jpg', // Use this filename when saving the image.
         source: {
-          originalFilename: 'bamse.jpg', // Use this filename when saving the image.
-          source: '', // The source this image is from
-          sourceId: 'bamse-the-cat' // A string that uniquely identifies it within the source
+          name: 'twitter', // The source this image is from
+          id: 'https://pbs.twimg.com/media/D5efx9aXkAE9z7P.jpg' // A string that uniquely identifies it within the source
         },
         description: 'Bamse the Cat',
         creditLine: 'By Victoria'
