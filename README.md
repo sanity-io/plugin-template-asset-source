@@ -14,7 +14,7 @@ A template for making a custom asset source plugin.
 
 or
 
-`sanity init plugin` and select the custom asset source plugin option.
+~`sanity init plugin` and select the custom asset source plugin option.~ COMING SOON!
 
 ### Defining asset sources globally
 
