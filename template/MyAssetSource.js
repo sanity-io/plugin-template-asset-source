@@ -11,6 +11,7 @@ import styles from './MyAssetSource.css'
 function MyAssetSource (props) {
   const examples = [
     { title: 'Official documentation', href: 'https://www.sanity.io/docs/custom-asset-sources'},
+    { title: 'Get started with this plugin', href: 'https://github.com/sanity-io/plugin-template-asset-source/blob/master/README.md'},
     { title: 'Webcam (tutorial)', href: 'https://github.com/sanity-io/sanity-recipes/tree/master/examples/studio-with-custom-asset-source'},
     { title: 'Unsplash (plugin)', href: 'https://github.com/sanity-io/sanity-plugin-asset-source-unsplash'},
     { title: 'Cloudinary (plugin)', href: 'https://github.com/sanity-io/sanity-plugin-asset-source-cloudinary'},
