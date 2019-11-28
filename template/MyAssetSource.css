@@ -1,3 +1,7 @@
 .root {
   padding: 1rem;
 }
+
+.image {
+  max-width: 400px;
+}

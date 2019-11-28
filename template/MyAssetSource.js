@@ -17,9 +17,32 @@ function MyAssetSource (props) {
     { title: 'Cloudinary (plugin)', href: 'https://github.com/sanity-io/sanity-plugin-asset-source-cloudinary'},
     { title: 'thispersondoesnotexist (plugin)', href: 'https://github.com/sanity-io/sanity-plugin-asset-source-thispersondoesnotexist'}
   ]
+
+  const handleSelect = () => {
+    props.onSelect([{
+      kind: 'url',
+      value: 'https://pbs.twimg.com/media/D5efx9aXkAE9z7P.jpg',
+      assetDocumentProps: {
+        originalFilename: 'bamse.jpg', // Use this filename when saving the image.
+        source: {
+          originalFilename: 'bamse.jpg', // Use this filename when saving the image.
+          source: '', // The source this image is from
+          sourceId: 'bamse-the-cat' // A string that uniquely identifies it within the source
+        },
+        description: 'Bamse the Cat',
+        creditLine: 'By Victoria'
+      }
+    }]
+    )
+  }
+
   return (
     <Dialog title="My asset source" onClose={props.onClose} isOpen>
       <h2>Hello custom asset source!</h2>
+      <p>Click this image to select it:</p>
+      <div>
+        <img className={styles.image} src="https://pbs.twimg.com/media/D5efx9aXkAE9z7P.jpg" onClick={handleSelect} />
+      </div>
       <p>Replace this content with your custom asset source. For help and inspiration check out:</p>
       <ul>
         {examples.map(example => (
