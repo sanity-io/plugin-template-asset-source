@@ -21,16 +21,16 @@ function MyAssetSource (props) {
   const handleSelect = () => {
     props.onSelect([{
       kind: 'url',
-      value: 'https://i.imgur.com/T6T0H.jpg',
+      value: 'https://i.imgur.com/hT1E3ZL.jpg',
       assetDocumentProps: {
-        originalFilename: 'grumpycat.jpg', // Use this filename when saving the image.
+        originalFilename: 'bamse.jpg', // Use this filename when saving the image.
         source: {
           source: 'imgur', // The source this image is from
-          id: 'nX4QUO4' // A string that uniquely identifies it within the source
-          url: 'https://imgur.com/gallery/T6T0H' // Where to find more info about the asset
+          id: 'hT1E3ZL' // A string that uniquely identifies it within the source
+          url: 'https://imgur.com/hT1E3ZL' // Where to find more info about the asset
         },
-        description: 'A grumpy cat',
-        creditLine: 'jennibot by Imgur'
+        description: 'Bamse the Cat',
+        creditLine: 'Bamse by Victoria'
       }
     }]
     )
@@ -41,7 +41,7 @@ function MyAssetSource (props) {
       <h2>Hello custom asset source!</h2>
       <p>Click this image to select it:</p>
       <div>
-        <img className={styles.image} src="https://i.imgur.com/nX4QUO4.jpg" onClick={handleSelect} />
+        <img className={styles.image} src="https://i.imgur.com/hT1E3ZL.jpg" onClick={handleSelect} />
       </div>
       <p>Replace this content with your custom asset source. For help and inspiration check out:</p>
       <ul>
