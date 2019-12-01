@@ -26,7 +26,7 @@ function MyAssetSource (props) {
         originalFilename: 'bamse.jpg', // Use this filename when saving the image.
         source: {
           source: 'imgur', // The source this image is from
-          id: 'hT1E3ZL' // A string that uniquely identifies it within the source
+          id: 'hT1E3ZL', // A string that uniquely identifies it within the source
           url: 'https://imgur.com/hT1E3ZL' // Where to find more info about the asset
         },
         description: 'Bamse the Cat',
