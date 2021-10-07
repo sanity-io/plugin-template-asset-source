@@ -1,7 +1,7 @@
 {
   "name": "plugin-template-asset-source",
   "private": true,
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A template for making a custom asset source plugin",
   "repository": {
     "type": "git",
@@ -20,6 +20,6 @@
   "sanityTemplate": {
     "suggestedName": "my-asset-source",
     "requiresConfig": false,
-    "minimumBaseVersion": "0.146.0"
+    "minimumBaseVersion": "2.13.0"
   }
 }
