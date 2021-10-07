@@ -1,56 +1,80 @@
-import React from 'react'
-import Dialog from 'part:@sanity/components/dialogs/fullscreen'
+import React from "react"
+import { Dialog, Text, Heading, Box, Stack } from "@sanity/ui"
+import styled from "styled-components"
 
-// Sanity uses CSS modules for styling. We import a stylesheet and get an
-// object where the keys matches the class names defined in the CSS file and
-// the values are a unique, generated class name. This allows you to write CSS
-// with only your components in mind without any conflicting class names.
-// See https://github.com/css-modules/css-modules for more info.
-import styles from './MyAssetSource.css'
+const Img = styled.img`
+  max-width: 400px;
+`
 
-function MyAssetSource (props) {
+function MyAssetSource(props) {
   const examples = [
-    { title: 'Official documentation', href: 'https://www.sanity.io/docs/custom-asset-sources'},
-    { title: 'Get started with this plugin', href: 'https://github.com/sanity-io/plugin-template-asset-source/blob/master/README.md'},
-    { title: 'Webcam (tutorial)', href: 'https://github.com/sanity-io/sanity-recipes/tree/master/examples/studio-with-custom-asset-source'},
-    { title: 'Unsplash (plugin)', href: 'https://github.com/sanity-io/sanity-plugin-asset-source-unsplash'},
-    { title: 'Cloudinary (plugin)', href: 'https://github.com/sanity-io/sanity-plugin-asset-source-cloudinary'},
-    { title: 'thispersondoesnotexist (plugin)', href: 'https://github.com/sanity-io/sanity-plugin-asset-source-thispersondoesnotexist'}
+    {
+      title: "Official documentation",
+      href: "https://www.sanity.io/docs/custom-asset-sources",
+    },
+    {
+      title: "Get started with this plugin",
+      href: "https://github.com/sanity-io/plugin-template-asset-source/blob/master/README.md",
+    },
+    {
+      title: "Webcam (tutorial)",
+      href: "https://github.com/sanity-io/sanity-recipes/tree/master/examples/studio-with-custom-asset-source",
+    },
+    {
+      title: "Unsplash (plugin)",
+      href: "https://github.com/sanity-io/sanity-plugin-asset-source-unsplash",
+    },
+    {
+      title: "Cloudinary (plugin)",
+      href: "https://github.com/sanity-io/sanity-plugin-asset-source-cloudinary",
+    },
+    {
+      title: "thispersondoesnotexist (plugin)",
+      href: "https://github.com/sanity-io/sanity-plugin-asset-source-thispersondoesnotexist",
+    },
   ]
 
   const handleSelect = () => {
-    props.onSelect([{
-      kind: 'url',
-      value: 'https://i.imgur.com/hT1E3ZL.jpg',
-      assetDocumentProps: {
-        originalFilename: 'bamse.jpg', // Use this filename when saving the image.
-        source: {
-          source: 'imgur', // The source this image is from
-          id: 'hT1E3ZL', // A string that uniquely identifies it within the source
-          url: 'https://imgur.com/hT1E3ZL' // Where to find more info about the asset
+    props.onSelect([
+      {
+        kind: "url",
+        value: "https://i.imgur.com/hT1E3ZL.jpg",
+        assetDocumentProps: {
+          originalFilename: "bamse.jpg", // Use this filename when saving the image.
+          source: {
+            source: "imgur", // The source this image is from
+            id: "hT1E3ZL", // A string that uniquely identifies it within the source
+            url: "https://imgur.com/hT1E3ZL", // Where to find more info about the asset
+          },
+          description: "Bamse the Cat",
+          creditLine: "Bamse by Victoria",
         },
-        description: 'Bamse the Cat',
-        creditLine: 'Bamse by Victoria'
-      }
-    }]
-    )
+      },
+    ])
   }
 
   return (
-    <Dialog title="My asset source" onClose={props.onClose} isOpen>
-      <h2>Hello custom asset source!</h2>
-      <p>Click this image to select it:</p>
-      <div>
-        <img className={styles.image} src="https://i.imgur.com/hT1E3ZL.jpg" onClick={handleSelect} />
-      </div>
-      <p>Replace this content with your custom asset source. For help and inspiration check out:</p>
-      <ul>
-        {examples.map(example => (
-          <li key={example.title}>
-            <a href={example.href}>{example.title}</a>
-          </li>
-        ))}
-      </ul>
+    <Dialog header="My asset source" onClose={props.onClose} isOpen width={2}>
+      <Stack padding={4} space={4}>
+        <Heading as="h2">Hello custom asset source!</Heading>
+        <Text as="p">Click this image to select it:</Text>
+        <Box paddingY={3}>
+          <Img src="https://i.imgur.com/hT1E3ZL.jpg" onClick={handleSelect} />
+        </Box>
+        <Text as="p">
+          Replace this content with your custom asset source. For help and
+          inspiration check out:
+        </Text>
+        <ul>
+          {examples.map((example) => (
+            <li key={example.title}>
+              <Text as="a" href={example.href}>
+                {example.title}
+              </Text>
+            </li>
+          ))}
+        </ul>
+      </Stack>
     </Dialog>
   )
 }
